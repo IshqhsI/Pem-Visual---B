@@ -1,9 +1,17 @@
-﻿Public Class Form1
+Public Class Form1
 
+	Private Sub TextBox2_Keyup(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox2.KeyUp
+    
+        Dim harga, banyak As Integer
 
-   
+        harga = Val(TextBox1.Text)
+        banyak = Val(TextBox2.Text)
+        TextBox3.Text = "Rp. " + Str(harga * banyak)
+    
+    End Sub
 
     Private Sub ComboBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboBox1.SelectedIndexChanged
+    
         Dim harga, banyak, total, total_setdiskon, diskonjum As Integer
         Dim diskon As String
 
@@ -32,13 +40,7 @@
 
         TextBox4.Text = "Rp. " + Str(diskonjum) + " "
         TextBox5.Text = "Rp. " + Str(total_setdiskon)
+    
     End Sub
-
-    Private Sub TextBox2_Keyup(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox2.KeyUp
-        Dim harga, banyak As Integer
-
-        harga = Val(TextBox1.Text)
-        banyak = Val(TextBox2.Text)
-        TextBox3.Text = "Rp. " + Str(harga * banyak)
-    End Sub
+  
 End Class
